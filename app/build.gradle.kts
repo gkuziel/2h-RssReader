@@ -50,6 +50,7 @@ dependencies {
     androidTestImplementation("androidx.test.espresso:espresso-core:3.6.1")
     implementation("androidx.activity:activity-ktx:1.9.1")
     implementation("com.squareup.retrofit2:retrofit:2.9.0")
-    implementation ("com.squareup.retrofit2:converter-scalars:2.9.0")
+    implementation("com.squareup.retrofit2:converter-scalars:2.9.0")
     implementation("io.coil-kt:coil:2.1.0")
+    implementation("com.github.ivanisidrowu.KtRssReader:kotlin:v2.2.1")
 }

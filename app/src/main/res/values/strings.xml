@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">SkyRssReader</string>
+    <string name="load_data">Load feed</string>
+    <string name="clear_list">Clear feed</string>
 </resources>

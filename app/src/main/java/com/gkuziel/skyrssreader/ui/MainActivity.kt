@@ -24,6 +24,7 @@ class MainActivity : AppCompatActivity() {
         viewModel.state.observe(this) {
             rssItemAdapter.setItems(it)
         }
+        viewModel.loadData()
     }
 
     private fun initViews() {

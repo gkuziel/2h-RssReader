@@ -27,6 +27,8 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun initViews() {
+        // todo: add loading / error handling on the UI
+
         with(binding) {
             rvFeed.adapter = rssItemAdapter
             rvFeed.layoutManager = LinearLayoutManager(

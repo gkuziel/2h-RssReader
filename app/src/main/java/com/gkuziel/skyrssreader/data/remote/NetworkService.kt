@@ -9,6 +9,7 @@ class NetworkService {
     private val retrofit = Retrofit.Builder()
         .baseUrl("https://feeds.skynews.com/feeds/rss/")
         .addConverterFactory(ScalarsConverterFactory.create())
+        // todo: add a proper xml parser
         .build()
 
     private val skyRssService = retrofit.create(SkyRssService::class.java)

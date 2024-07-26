@@ -11,6 +11,7 @@ import kotlinx.coroutines.Job
 import kotlinx.coroutines.launch
 
 class MainViewModel internal constructor(
+    // todo: to be injected
     private val repository: Repository = Repository()
 ) : ViewModel() {
 
@@ -30,9 +31,9 @@ class MainViewModel internal constructor(
             try {
                 _state.value = repository.loadRssWorlds()
             } catch (error: Throwable) {
-                //
+                // todo: add exception handling
             } finally {
-                //
+                // todo: add exception handling
             }
         }
     }

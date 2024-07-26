@@ -43,6 +43,7 @@ class RssItemAdapter(private val context: Context) :
             tvDescription.text = item.description
             tvLink.text = item.url
             tvLink.setOnClickListener {
+                // todo: add exception handling
                 val browserIntent = Intent(
                     Intent.ACTION_VIEW,
                     Uri.parse(item.url)

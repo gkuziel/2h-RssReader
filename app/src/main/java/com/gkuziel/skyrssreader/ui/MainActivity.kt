@@ -1,7 +1,8 @@
-package com.gkuziel.skyrssreader
+package com.gkuziel.skyrssreader.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.gkuziel.skyrssreader.R
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

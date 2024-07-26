@@ -2,13 +2,15 @@ package com.gkuziel.skyrssreader.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import androidx.activity.viewModels
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.gkuziel.skyrssreader.R
 import com.gkuziel.skyrssreader.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
 
+    private val rssItemAdapter by lazy { RssItemAdapter(this) }
     private lateinit var binding: ActivityMainBinding
     private val viewModel: MainViewModel by viewModels()
 
@@ -17,16 +19,21 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        initViews()
 
         viewModel.state.observe(this) {
-
-            Log.d("dfsd", it.firstOrNull()?.text ?:"")
+            rssItemAdapter.setItems(it)
         }
-        initViews()
     }
 
     private fun initViews() {
         with(binding) {
+            rvFeed.adapter = rssItemAdapter
+            rvFeed.layoutManager = LinearLayoutManager(
+                this@MainActivity,
+                RecyclerView.VERTICAL,
+                false
+            )
             btnLoadFeed.setOnClickListener {
                 viewModel.loadData()
             }

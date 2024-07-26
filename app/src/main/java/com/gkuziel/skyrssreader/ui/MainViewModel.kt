@@ -28,8 +28,7 @@ class MainViewModel internal constructor(
     fun loadData(): Job {
         return viewModelScope.launch {
             try {
-                val feed = repository.loadRssWorlds()
-                _state.value = listOf(RssItem(feed))
+                _state.value = repository.loadRssWorlds()
             } catch (error: Throwable) {
                 //
             } finally {

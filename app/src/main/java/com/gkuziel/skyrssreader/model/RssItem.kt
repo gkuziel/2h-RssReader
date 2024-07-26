@@ -1,5 +1,8 @@
 package com.gkuziel.skyrssreader.model
 
 class RssItem(
-   val  text: String
+    val title: String,
+    val description: String,
+    val url: String,
+    val imageUrl: String?
 )

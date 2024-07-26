@@ -20,5 +20,17 @@ class MainActivity : AppCompatActivity() {
         viewModel.state.observe(this) {
 
         }
+        initViews()
+    }
+
+    private fun initViews() {
+        with(binding) {
+            btnLoadFeed.setOnClickListener {
+                viewModel.loadData()
+            }
+            btnClearFeed.setOnClickListener {
+                viewModel.clearData()
+            }
+        }
     }
 }

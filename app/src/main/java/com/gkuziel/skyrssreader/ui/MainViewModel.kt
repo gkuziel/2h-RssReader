@@ -15,6 +15,14 @@ class MainViewModel internal constructor(
 
     val state: LiveData<List<RssItem>>
         get() = _state
+
+    fun loadData(){
+        _state.value = listOf(RssItem())
+    }
+
+    fun clearData(){
+        _state.value = emptyList()
+    }
 }
 
 

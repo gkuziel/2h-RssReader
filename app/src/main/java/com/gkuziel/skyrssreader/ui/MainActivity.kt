@@ -2,6 +2,7 @@ package com.gkuziel.skyrssreader.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import androidx.activity.viewModels
 import com.gkuziel.skyrssreader.R
 import com.gkuziel.skyrssreader.databinding.ActivityMainBinding
@@ -19,6 +20,7 @@ class MainActivity : AppCompatActivity() {
 
         viewModel.state.observe(this) {
 
+            Log.d("dfsd", it.firstOrNull()?.text ?:"")
         }
         initViews()
     }

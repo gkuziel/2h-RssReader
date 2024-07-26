@@ -19,7 +19,7 @@ class Repository(
                 it.title,
                 it.description,
                 it.link,
-                "https://banner2.cleanpng.com/20180424/qwq/kisspng-rss-web-feed-computer-icons-feed-5adf845abd7789.3234863615245978507761.jpg"
+                it.enclosure?.url
             )
         } ?: emptyList()
     }
